@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    sell
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <div class="mb-3">
+            <form action="/sell" method="post">
+                <!--<select name = "symbol" id = "symbol">
+                    {% for row in database %}
+                    <option>{{ row["symbol"] }}</option>
+                    {% endfor %}
+                </select>-->
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Enter Amount" type="text">
+            </form>
+        </div>
+        <button class="btn btn-primary" type="submit">Withdraw</button>
+    </form>
+{% endblock %}

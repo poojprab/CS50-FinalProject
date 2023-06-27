@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Withdrawals</th>
+                <th>Deposits</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in database %}
+            <tr>
+                <td>{{ row["withdrawals"] }}</td>
+                <td>{{ row["deposits"] }}</td>
+                <td>{{ row["date"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
